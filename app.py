@@ -1,5 +1,5 @@
 import streamlit as st
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 import numpy as np
 from PIL import Image
 
@@ -8,7 +8,7 @@ with open("class_labels.txt") as f:
     class_names = [line.strip() for line in f.readlines()]
 
 # Load TFLite model
-interpreter = tf.lite.Interpreter(
+interpreter = tflite.Interpreter(
     model_path="skin_cancer_quantized.tflite"
 )
 
