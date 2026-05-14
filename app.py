@@ -1,8 +1,7 @@
-import streamlit as st
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 import numpy as np
 from PIL import Image
-
+import streamlit as st
 # Load class labels
 with open("class_labels.txt") as f:
     class_names = [line.strip() for line in f.readlines()]
