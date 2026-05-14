@@ -1,5 +1,5 @@
 import streamlit as st
-import tflite_runtime.interpreter as tflite
+from ai_edge_litert.interpreter import Interpreter
 import numpy as np
 from PIL import Image
 
